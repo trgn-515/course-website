@@ -3,14 +3,15 @@
 % =======================================================
 \usepackage{tcolorbox}
 \usepackage{xcolor}
-\usepackage{fvextra} % REQUIRED for code wrapping
+\usepackage{fvextra} 
+\usepackage{etoolbox}
 \tcbuselibrary{skins, breakable}
 
 % FIX: Force code wrapping globally
 \fvset{breaklines=true, breakanywhere=true}
 
 % =======================================================
-% 2. DEFINE COLORS (MATCHING YOUR HTML/CSS)
+% 2. DEFINE COLORS
 % =======================================================
 % Note (Blue)
 \definecolor{note-bg}{HTML}{f0f7ff}
@@ -32,12 +33,12 @@
 \definecolor{codeborder}{HTML}{E0E0E0}
 
 % =======================================================
-% 3. ROBUST ENVIRONMENT OVERRIDES
+% 3. THE FIX: AtEndPreamble HOOK
 % =======================================================
-\AtBeginDocument{
+% This runs AFTER Quarto defines its boxes, effectively overwriting them.
+\AtEndPreamble{
 
   % --- CODE BLOCKS ---
-  % Safely redefine Shaded
   \ifdefined\Shaded
     \renewenvironment{Shaded}{
       \begin{tcolorbox}[
@@ -50,79 +51,42 @@
     }{\end{tcolorbox}}
   \fi
 
-  % --- CALLOUT: NOTE (BLUE) ---
-  % Check if 'callout-note' exists. Renew if yes, New if no.
-  \ifcsname callout-note\endcsname
+  % --- CALLOUT: NOTE ---
+  \ifcsdef{callout-note}{
     \renewtcolorbox{callout-note}[1]{
       enhanced jigsaw, breakable,
       colback=note-bg, colframe=note-border, coltitle=note-text,
       boxrule=2pt, leftrule=2pt, rightrule=2pt, toprule=2pt, bottomrule=2pt,
-      arc=3pt,
-      left=10pt, right=10pt, top=8pt, bottom=8pt,
+      arc=3pt, left=10pt, right=10pt, top=8pt, bottom=8pt,
       toptitle=2pt, bottomtitle=5pt,
       title={#1}, fonttitle=\bfseries,
       sharp corners=all, detach title, before upper={\tcbtitle\par\medskip}
     }
-  \else
-    \newtcolorbox{callout-note}[1]{
-      enhanced jigsaw, breakable,
-      colback=note-bg, colframe=note-border, coltitle=note-text,
-      boxrule=2pt, leftrule=2pt, rightrule=2pt, toprule=2pt, bottomrule=2pt,
-      arc=3pt,
-      left=10pt, right=10pt, top=8pt, bottom=8pt,
-      toptitle=2pt, bottomtitle=5pt,
-      title={#1}, fonttitle=\bfseries,
-      sharp corners=all, detach title, before upper={\tcbtitle\par\medskip}
-    }
-  \fi
+  }{}
 
-  % --- CALLOUT: WARNING (ORANGE) ---
-  \ifcsname callout-warning\endcsname
+  % --- CALLOUT: WARNING ---
+  \ifcsdef{callout-warning}{
     \renewtcolorbox{callout-warning}[1]{
       enhanced jigsaw, breakable,
       colback=warn-bg, colframe=warn-border, coltitle=warn-text,
       boxrule=2pt, leftrule=2pt, rightrule=2pt, toprule=2pt, bottomrule=2pt,
-      arc=3pt,
-      left=10pt, right=10pt, top=8pt, bottom=8pt,
+      arc=3pt, left=10pt, right=10pt, top=8pt, bottom=8pt,
       toptitle=2pt, bottomtitle=5pt,
       title={#1}, fonttitle=\bfseries,
       sharp corners=all, detach title, before upper={\tcbtitle\par\medskip}
     }
-  \else
-    \newtcolorbox{callout-warning}[1]{
-      enhanced jigsaw, breakable,
-      colback=warn-bg, colframe=warn-border, coltitle=warn-text,
-      boxrule=2pt, leftrule=2pt, rightrule=2pt, toprule=2pt, bottomrule=2pt,
-      arc=3pt,
-      left=10pt, right=10pt, top=8pt, bottom=8pt,
-      toptitle=2pt, bottomtitle=5pt,
-      title={#1}, fonttitle=\bfseries,
-      sharp corners=all, detach title, before upper={\tcbtitle\par\medskip}
-    }
-  \fi
+  }{}
 
-  % --- CALLOUT: IMPORTANT (RED) ---
-  \ifcsname callout-important\endcsname
+  % --- CALLOUT: IMPORTANT ---
+  \ifcsdef{callout-important}{
     \renewtcolorbox{callout-important}[1]{
       enhanced jigsaw, breakable,
       colback=imp-bg, colframe=imp-border, coltitle=imp-text,
       boxrule=2pt, leftrule=2pt, rightrule=2pt, toprule=2pt, bottomrule=2pt,
-      arc=3pt,
-      left=10pt, right=10pt, top=8pt, bottom=8pt,
+      arc=3pt, left=10pt, right=10pt, top=8pt, bottom=8pt,
       toptitle=2pt, bottomtitle=5pt,
       title={#1}, fonttitle=\bfseries,
       sharp corners=all, detach title, before upper={\tcbtitle\par\medskip}
     }
-  \else
-    \newtcolorbox{callout-important}[1]{
-      enhanced jigsaw, breakable,
-      colback=imp-bg, colframe=imp-border, coltitle=imp-text,
-      boxrule=2pt, leftrule=2pt, rightrule=2pt, toprule=2pt, bottomrule=2pt,
-      arc=3pt,
-      left=10pt, right=10pt, top=8pt, bottom=8pt,
-      toptitle=2pt, bottomtitle=5pt,
-      title={#1}, fonttitle=\bfseries,
-      sharp corners=all, detach title, before upper={\tcbtitle\par\medskip}
-    }
-  \fi
+  }{}
 }
