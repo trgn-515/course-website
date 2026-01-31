@@ -1,0 +1,37 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "TRGN 515"
+  description: "Bioinformatics & Genomics"
+  
+  # The top navigation bar
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: modules.qmd
+        text: Modules
+    right:
+      - icon: github
+        href: https://github.com/TRGN-515-2026
+        aria-label: GitHub
+
+  # The side navigation menu
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - section: "Module 1: Sequencing technologies"
+        contents:
+          - modules/1_sequencing_techs/1_sequencing_techs.qmd
+      # You can add more modules here later
+      # - section: "Module 2: Alignment"
+      #   contents: ...
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true

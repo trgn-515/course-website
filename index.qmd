@@ -1,0 +1,7 @@
+---
+title: "Welcome to TRGN 515"
+---
+
+This is the central hub for TRGN 515: Next Generation Sequencing.
+
+Please select a module from the sidebar to begin.
