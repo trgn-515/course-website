@@ -470,8 +470,9 @@ The read group ID and platform information allows us to find library and sequenc
 Fastq files generated with older machines have different headers. You can find more information about the Fastq headers here (https://en.wikipedia.org/wiki/FASTQ_format) and about Read groups in the GATK website (https://gatk.broadinstitute.org/hc/en-us/articles/360035890671-Read-groups).
 
 
-**NOTE:** Some fastq files may have more than one flowcell and lane for all the reads if the sample was sequenced in multiple flowcell lanes. In that case, if you detect bias in the Per Tile plot in FastQC, you may have to separate the reads by flowcell and lane before mapping.
-
+::: {.callout-warning}
+Some fastq files may have more than one flowcell and lane for all the reads if the sample was sequenced in multiple flowcell lanes. In that case, if you detect bias in the Per Tile plot in FastQC, you may have to separate the reads by flowcell and lane before mapping.
+:::
 
 The output of bwa is sometimes unsorted. To ensure we have a coordinate sorted bam file (sorted by starting position), do the following:
 
@@ -508,7 +509,9 @@ The two most common sources for artificial duplicates in Illumina data are:
 * PCR duplicates - They occur when the same fragment of DNA gets amplify multiple times during library preparation, often due to overamplification
 * Optical duplicates - They occur during sequencing when a single amplification fluorescent cluster is incorrectly detected as multiple clusters by the optical sensor of the sequencing instrument. 
 
-**NOTE:** Duplicate marking is not always required! Some amplicon sequencing approaches will have sequencing reads start at the same sites (the primer sites), and therefore could be marked as duplicates without representing errors. Also, in RNA-seq you would also expect high rates of sample duplication, and therefore is also not advised to remove duplicates (unless you have UMIs...)
+::: {.callout-warning}
+Duplicate marking is not always required! Some amplicon sequencing approaches will have sequencing reads start at the same sites (the primer sites), and therefore could be marked as duplicates without representing errors. Also, in RNA-seq you would also expect high rates of sample duplication, and therefore is also not advised to remove duplicates (unless you have UMIs...)
+:::
 
 Most tools for marking duplicates from BAM files use the 5' coordinates and mapping orientations of each read (or read pair), including any clipping, gaps or insertions, finding all reads that share exact genomic coordinates. It then keeps the read with the highest quality, marking the rest as duplicates. Note that often reads are not removed, but a flag is added. That's why we call it marking duplicates!
 
@@ -730,8 +733,9 @@ F_1 = \frac{2}{\text{recall}^{-1} + \text{precision}^{-1}} = 2 \cdot \frac{\text
 
 For our benchmarking, we are mostly interested in TP, FP and FN. In fact, our number of True Negatives would be so high that it will distort our specificity. For that reason, in variant calling and many other fields, precision and recall are the most important metrics, alongisde the F1 score. Precision is also known as Positive Predictive Value and recall is the same as sensitivity. Specificity and sensitivity is more comomnly used in diagnostic tests, for example, where the TN hold important value.
 
-**Note:** There's a wide misuse of the term specificity for PPV, which causes loads of confussion. So sometimes is better to avoid the terms sensitivity/specificity and stick to recall/precision when benchmarking. Sensitivity/Specificity are hugely important in other fields though.
-
+::: {.callout-warning}
+There's a wide misuse of the term specificity for PPV, which causes loads of confussion. So sometimes is better to avoid the terms sensitivity/specificity and stick to recall/precision when benchmarking. Sensitivity/Specificity are hugely important in other fields though.
+:::
 
 # VCF comparison
 
@@ -762,13 +766,17 @@ You can write your own script to do this. The basic operation would be the follo
 3. Match variant position, allele, and genotype
 4. Repeat for every variant
 
-**NOTE:** Positions without variants (GT=0/0) will not be present in your VCF files, but you still need to account for them.
+::: {.callout-warning}
+Positions without variants (GT=0/0) will not be present in your VCF files, but you still need to account for them.
+:::
 
 You can read VCF files as normal text files, since you know the format of a VCF file. Alternatively, you can use specific packages to help you parse the VCF files. A common package within Python is `pyvcf`. Within R, `vcfR` does the job.
 
 You can also use already written software to do this. We are esentially finding intersections between two VCF files. A widely used software suite to do this is `bedtools`, which handles BED files but also BAM and VCF files and has endless tools (https://bedtools.readthedocs.io/en/).The one for the job would be `bedtools intersect`. Another piece of software you can use is `bcftools isec`.
 
-**NOTE:** Some of these tools may have behaviors you don't expect. For instance, `bedtools` is a coordinate based software (bed file), so it won't take into account allele, genotype or filtering information. `bcftools isec` is a little better in that respect, as it will use allele information for the intersection, but not genotype. That means a genotype 0/1 and 1/1 will be matched. 
+::: {.callout-warning}
+Some of these tools may have behaviors you don't expect. For instance, `bedtools` is a coordinate based software (bed file), so it won't take into account allele, genotype or filtering information. `bcftools isec` is a little better in that respect, as it will use allele information for the intersection, but not genotype. That means a genotype 0/1 and 1/1 will be matched. 
+:::
 
 Before doing the matching, you may want to filter your VCF to:
 
