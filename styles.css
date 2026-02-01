@@ -129,20 +129,25 @@ h3 + .callout-note .callout-header {
 }
 
 /* ==========================================================================
-   Syntax Highlighting Overrides (Fixing the "Ugly Red")
+   Bash Syntax Fix
    ========================================================================== */
 
-/* Change Strings ("...") from Red to Teal */
-code span.st {
-  color: #20b2aa !important; /* Light Sea Green */
+/* 1. Fix Commands (e.g., 'seqtk', 'sudo', 'grep') */
+/* These are often tagged as functions (.fu) or extensions (.ex) */
+code span.fu, 
+code span.ex {
+  color: #007bff !important; /* Change to Blue (Bootstrap primary) */
+  font-weight: bold;         /* Make them bold to stand out */
 }
 
-/* Change Variables ($HOME) from Red/Dark to Blue */
-code span.va {
-  color: #007bff !important; /* Standard Bootstrap Blue */
+/* 2. Fix Flags/Attributes (e.g., '-s', '--help') */
+/* These are often tagged as attributes (.at) */
+code span.at {
+  color: #20b2aa !important; /* Change to Teal */
 }
 
-/* Optional: Change Keywords (function, if, then) to Purple */
-code span.kw {
-  color: #6f42c1 !important;
+/* 3. Catch-all for other "Red" elements in Bash */
+/* Sometimes the highlighter thinks a command is a preprocessor (.pp) */
+code span.pp {
+  color: #6f42c1 !important; /* Purple */
 }
