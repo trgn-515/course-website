@@ -110,9 +110,16 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Welcome to TRGN 515",
+    "title": "TRGN 515: Advanced Human Genomic Analysis Methods",
     "section": "",
-    "text": "This is the central hub for TRGN 515: Next Generation Sequencing.\nPlease select a module from the sidebar to begin."
+    "text": "Below is the schedule of modules, slides, and assignments for the semester. Links will be updated as we progress through the course.\n\n\n\n\n\n\n\n\n\n\nModule\nSlides\nAssignment\nDue Date\n\n\n\n\nModule 1: Sequencing TechnologiesOverview of NGS, Nanopore, and PacBio.\n{{&lt; fa tv &gt;}} HTML{{&lt; fa file-pdf &gt;}} PDF\n{{&lt; fa pen-to-square &gt;}} Assignment 1\nFeb 12\n\n\nModule 2: AlignmentBWA, Minimap2, and SAM/BAM formats.\n{{&lt; fa tv &gt;}} HTML\n{{&lt; fa pen-to-square &gt;}} Assignment 2\nTBD\n\n\nModule 3: Variant CallingGATK, DeepVariant, and VCF files.\n{{&lt; fa tv &gt;}} HTML\n{{&lt; fa pen-to-square &gt;}} Assignment 3\nTBD"
+  },
+  {
+    "objectID": "index.html#course-content",
+    "href": "index.html#course-content",
+    "title": "TRGN 515: Advanced Human Genomic Analysis Methods",
+    "section": "",
+    "text": "Below is the schedule of modules, slides, and assignments for the semester. Links will be updated as we progress through the course.\n\n\n\n\n\n\n\n\n\n\nModule\nSlides\nAssignment\nDue Date\n\n\n\n\nModule 1: Sequencing TechnologiesOverview of NGS, Nanopore, and PacBio.\n{{&lt; fa tv &gt;}} HTML{{&lt; fa file-pdf &gt;}} PDF\n{{&lt; fa pen-to-square &gt;}} Assignment 1\nFeb 12\n\n\nModule 2: AlignmentBWA, Minimap2, and SAM/BAM formats.\n{{&lt; fa tv &gt;}} HTML\n{{&lt; fa pen-to-square &gt;}} Assignment 2\nTBD\n\n\nModule 3: Variant CallingGATK, DeepVariant, and VCF files.\n{{&lt; fa tv &gt;}} HTML\n{{&lt; fa pen-to-square &gt;}} Assignment 3\nTBD"
   },
   {
     "objectID": "modules.html",
