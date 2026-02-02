@@ -18,7 +18,7 @@
     "href": "index.html",
     "title": "TRGN 515: Advanced Human Genomic Analysis Methods",
     "section": "",
-    "text": "Below is the schedule of modules, slides, and assignments for the semester. Links will be updated as we progress through the course.\n\n\n\n\n\n\n\n\n\nModule\nSlides\nAssignment\nDue Date\n\n\n\n\nModule 1: Sequencing TechnologiesOverview of NGS, Nanopore, and PacBio.\n HTML PDF\n Assignment 1\nFeb 12\n\n\nModule 2: AlignmentBWA, Minimap2, and SAM/BAM formats.\n HTML\n Assignment 2\nTBD\n\n\nModule 3: Variant CallingGATK, DeepVariant, and VCF files.\n HTML\n Assignment 3\nTBD"
+    "text": "Below is the schedule of modules, slides, and assignments for the semester. Links will be updated as we progress through the course.\n\n\n\n\n\n\n\n\n\nModule\nSlides\nAssignment\nDue Date\n\n\n\n\nModule 1: Sequencing TechnologiesOverview of NGS, Nanopore, and PacBio.\n HTML PDF\n Assignment 1\nFeb 12\n\n\nModule 2: Structural Variant DetectionDefinition and types of structural variants (SV), detection of indels and SV.\n HTML PDF\n Assignment 2\nFeb 19\n\n\nModule 3: Variant Functional AnnotationVariant effect prediction, linear and logistic regression.\n HTML PDF\n Assignment 3\nMar 5\n\n\nModule 4: Genome AssemblyIntroduction to genome assembly, QC, and hybrid-assembly.\n HTML PDF\n Assignment 4\nMar 26\n\n\nModule 5: GWASIntroduction to GWAS, population structure, and linkage disequilibrium.\n HTML PDF\n Assignment 5\nApr 9\n\n\nModule 6: Epigenetics - MethylationMethylation detection with 3rd Generation sequencing.\n HTML PDF\n Assignment 6\nApr 23\n\n\nModule 7: Metagenomics IIntroduction to metagenomics, 16S amplification, and taxonomy.\n HTML PDF\n Assignment 7\nApr 30\n\n\nModule 8: Metagenomics IIWhole-genome amplification, MAGs, and functional analysis.\n HTML PDF\n Assignment 8\nApr 30"
   },
   {
     "objectID": "modules/1_sequencing_techs/1_sequencing_techs.html",
@@ -171,6 +171,97 @@
     "href": "index.html#course-content",
     "title": "TRGN 515: Advanced Human Genomic Analysis Methods",
     "section": "",
-    "text": "Below is the schedule of modules, slides, and assignments for the semester. Links will be updated as we progress through the course.\n\n\n\n\n\n\n\n\n\nModule\nSlides\nAssignment\nDue Date\n\n\n\n\nModule 1: Sequencing TechnologiesOverview of NGS, Nanopore, and PacBio.\n HTML PDF\n Assignment 1\nFeb 12\n\n\nModule 2: AlignmentBWA, Minimap2, and SAM/BAM formats.\n HTML\n Assignment 2\nTBD\n\n\nModule 3: Variant CallingGATK, DeepVariant, and VCF files.\n HTML\n Assignment 3\nTBD"
+    "text": "Below is the schedule of modules, slides, and assignments for the semester. Links will be updated as we progress through the course.\n\n\n\n\n\n\n\n\n\nModule\nSlides\nAssignment\nDue Date\n\n\n\n\nModule 1: Sequencing TechnologiesOverview of NGS, Nanopore, and PacBio.\n HTML PDF\n Assignment 1\nFeb 12\n\n\nModule 2: Structural Variant DetectionDefinition and types of structural variants (SV), detection of indels and SV.\n HTML PDF\n Assignment 2\nFeb 19\n\n\nModule 3: Variant Functional AnnotationVariant effect prediction, linear and logistic regression.\n HTML PDF\n Assignment 3\nMar 5\n\n\nModule 4: Genome AssemblyIntroduction to genome assembly, QC, and hybrid-assembly.\n HTML PDF\n Assignment 4\nMar 26\n\n\nModule 5: GWASIntroduction to GWAS, population structure, and linkage disequilibrium.\n HTML PDF\n Assignment 5\nApr 9\n\n\nModule 6: Epigenetics - MethylationMethylation detection with 3rd Generation sequencing.\n HTML PDF\n Assignment 6\nApr 23\n\n\nModule 7: Metagenomics IIntroduction to metagenomics, 16S amplification, and taxonomy.\n HTML PDF\n Assignment 7\nApr 30\n\n\nModule 8: Metagenomics IIWhole-genome amplification, MAGs, and functional analysis.\n HTML PDF\n Assignment 8\nApr 30"
+  },
+  {
+    "objectID": "modules/0_intro_git/0_intro_git.html",
+    "href": "modules/0_intro_git/0_intro_git.html",
+    "title": "Module 0: Git and GitHub",
+    "section": "",
+    "text": "By the end of this module, you will be able to:\n\nConfigure your local Git environment.\nClone your class repository.\nUse the core Git commands (add, commit, push) to submit an assignment.",
+    "crumbs": [
+      "Home",
+      "Module 0: Sequencing technologies",
+      "Module 0: Git and GitHub"
+    ]
+  },
+  {
+    "objectID": "modules/0_intro_git/0_intro_git.html#learning-objectives",
+    "href": "modules/0_intro_git/0_intro_git.html#learning-objectives",
+    "title": "Module 0: Git and GitHub",
+    "section": "",
+    "text": "By the end of this module, you will be able to:\n\nConfigure your local Git environment.\nClone your class repository.\nUse the core Git commands (add, commit, push) to submit an assignment.",
+    "crumbs": [
+      "Home",
+      "Module 0: Sequencing technologies",
+      "Module 0: Git and GitHub"
+    ]
+  },
+  {
+    "objectID": "modules/0_intro_git/0_intro_git.html#github-is-a-cloud-hosting-service-for-git-repositories-that-includes-powerful-tools-for-project-management-and-collaboration.",
+    "href": "modules/0_intro_git/0_intro_git.html#github-is-a-cloud-hosting-service-for-git-repositories-that-includes-powerful-tools-for-project-management-and-collaboration.",
+    "title": "Module 0: Git and GitHub",
+    "section": "GitHub is a cloud-hosting service for Git repositories that includes powerful tools for project management and collaboration.",
+    "text": "GitHub is a cloud-hosting service for Git repositories that includes powerful tools for project management and collaboration.",
+    "crumbs": [
+      "Home",
+      "Module 0: Sequencing technologies",
+      "Module 0: Git and GitHub"
+    ]
+  },
+  {
+    "objectID": "modules/0_intro_git/0_intro_git.html#step-1-connect-git-repository-to-the-cluster.",
+    "href": "modules/0_intro_git/0_intro_git.html#step-1-connect-git-repository-to-the-cluster.",
+    "title": "Module 0: Git and GitHub",
+    "section": "Step 1: Connect git repository to the cluster.",
+    "text": "Step 1: Connect git repository to the cluster.\nYou only need do this once per assignment. It downloads the repository from GitHub to your local machine or, if the directory already exists in your local machine, it links it to the github remote repository.\n\nOption 1: Clone\nUse this option if you are starting fresh and you don’t have an existing local repository. You already have a folder in the USC server so we don’t need to do this.\n# Navigate to where you want to keep your coursework\ncd /scratch1/username\n\n# Clone your specific repository (replace URL with your classroom repo link)\ngit clone https://github.com/trgn-515-2026/student-repo-USERNAME.git\n\n# Enter the directory\ncd student-repo-YOURNAME\n\n\nOption 2: Initiate existing Folder\nSince you already have a folder for your user on the cluster, we don’t need to “clode” one from github. However, you need to turn your normal folder into a git repository.\n# 1. Enter your folder\ncd /scratch1/username\n\n# 2. Initialize Git\ngit init\ngit branch -M main\n\n# 3. Link to GitHub (Replace URL with your repo link)\ngit remote add origin https://github.com/TRGN-515-2026/student-repo-USERNAME.git\n\n# 4. Pull any existing files (like the README) from GitHub\ngit pull origin main --allow-unrelated-histories",
+    "crumbs": [
+      "Home",
+      "Module 0: Sequencing technologies",
+      "Module 0: Git and GitHub"
+    ]
+  },
+  {
+    "objectID": "modules/0_intro_git/0_intro_git.html#step-2-edit-code",
+    "href": "modules/0_intro_git/0_intro_git.html#step-2-edit-code",
+    "title": "Module 0: Git and GitHub",
+    "section": "Step 2: Edit code",
+    "text": "Step 2: Edit code\nCreate files, write code, and save your work as you normally would. For this class, you will create a new folder for each assignment within your user repository.",
+    "crumbs": [
+      "Home",
+      "Module 0: Sequencing technologies",
+      "Module 0: Git and GitHub"
+    ]
+  },
+  {
+    "objectID": "modules/0_intro_git/0_intro_git.html#step-3-stage-and-commit-save",
+    "href": "modules/0_intro_git/0_intro_git.html#step-3-stage-and-commit-save",
+    "title": "Module 0: Git and GitHub",
+    "section": "Step 3: Stage and Commit (Save)",
+    "text": "Step 3: Stage and Commit (Save)\nGit has a two-step saving process.\n\nAdd (Stage): Select which files you want to save.\nCommit: Actually save them with a message describing what you did.\n\n# Check which files have changed\ngit status\n\n# Add a specific file...\ngit add my_script.py\n\n# ...OR add everything in the current folder\ngit add .\n\n# Save the snapshot with a message\ngit commit -m \"Completed exercise 1\"",
+    "crumbs": [
+      "Home",
+      "Module 0: Sequencing technologies",
+      "Module 0: Git and GitHub"
+    ]
+  },
+  {
+    "objectID": "modules/0_intro_git/0_intro_git.html#step-4-push-upload",
+    "href": "modules/0_intro_git/0_intro_git.html#step-4-push-upload",
+    "title": "Module 0: Git and GitHub",
+    "section": "Step 4: Push (Upload)",
+    "text": "Step 4: Push (Upload)\nYour commits currently live only on your computer. To submit your assignment, you must upload them to GitHub.\ngit push origin main",
+    "crumbs": [
+      "Home",
+      "Module 0: Sequencing technologies",
+      "Module 0: Git and GitHub"
+    ]
+  },
+  {
+    "objectID": "modules/0_intro_git/assignment_template.html",
+    "href": "modules/0_intro_git/assignment_template.html",
+    "title": "Calculate read coverage",
+    "section": "",
+    "text": "title: “Assignment X: [Topic Name]” author: “[Your Name Here]” date: last-modified format: html: toc: true code-copy: true theme: cosmo css: ../../styles.css pdf: include-in-header: ../../header.tex callout-icon: false callout-appearance: default geometry: - top=30mm - left=20mm\n\nQuestion 1: [Short Title]\n\n\n\n\n\n\nNote\n\n\n\nWrite your answer here. You can use standard Markdown formatting.\nBullet point 1\nBullet point 2\n\n\nPart A: Code Implementation\nIf the question requires code, use a code block like the one below:\n\nCalculate read coverage\nsamtools depth input.bam | awk ‘{sum+=$3} END { print “Average =”,sum/NR}’\nPart B: Images\nIf you need to include a plot or screenshot, save the image in your folder and link it like this:\n{width=80%}\n\n\nQuestion 2: [Short Title]\n\n\n\n\n\n\nNote\n\n\n\nStart your answer to Question 2 here. This ensures that when the TAs grade your PDF, this question appears at the top of a fresh page.\n\n\nimport pandas as pd\ndef calculate_n50(lengths): ““” Example python function block ““” pass\n\nQuestion 3: [Short Title]\n\n\n\n\n\n\nNote\n\n\n\n(Continue this pattern for all questions…)"
   }
 ]

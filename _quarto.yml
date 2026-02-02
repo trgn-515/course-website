@@ -3,8 +3,8 @@ project:
   output-dir: docs
 
 website:
-  title: "TRGN 515"
-  description: "Bioinformatics & Genomics"
+  title: "TRGN-515"
+  description: "Advanced Human Genomic Analysis Methods"
   
   # The top navigation bar
   navbar:
@@ -23,12 +23,12 @@ website:
     style: "docked"
     search: true
     contents:
+      - section: "Module 0: Sequencing technologies"
+        contents:
+          - modules/0_intro_git/0_intro_git.qmd
       - section: "Module 1: Sequencing technologies"
         contents:
           - modules/1_sequencing_techs/1_sequencing_techs.qmd
-      # You can add more modules here later
-      # - section: "Module 2: Alignment"
-      #   contents: ...
 
 format:
   html:

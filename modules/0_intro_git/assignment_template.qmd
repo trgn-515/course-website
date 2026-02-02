@@ -1,0 +1,59 @@
+title: "Assignment X: [Topic Name]" author: "[Your Name Here]" date: last-modified format: html: toc: true code-copy: true theme: cosmo css: ../../styles.css pdf: include-in-header: ../../header.tex callout-icon: false callout-appearance: default geometry: - top=30mm - left=20mm
+
+<!-- INSTRUCTIONS FOR STUDENTS:
+1. Rename this file to match the assignment (e.g., 1_sequencing_techs.qmd).
+2. Update the 'title' and 'author' in the YAML header above.
+3. Write your answers below each Question header.
+4. Ensure you Render to PDF before submitting.
+-->
+
+Question 1: [Short Title]
+
+::: {.callout-note}
+Write your answer here. You can use standard Markdown formatting.
+
+Bullet point 1
+
+Bullet point 2
+:::
+
+Part A: Code Implementation
+
+If the question requires code, use a code block like the one below:
+
+# Calculate read coverage
+samtools depth input.bam | awk '{sum+=$3} END { print "Average = ",sum/NR}'
+
+
+Part B: Images
+
+If you need to include a plot or screenshot, save the image in your folder and link it like this:
+
+{width=80%}
+
+<!-- This tag forces the next question to start on a new page -->
+
+{{< pagebreak >}}
+
+Question 2: [Short Title]
+
+::: {.callout-note}
+Start your answer to Question 2 here. This ensures that when the TAs grade your PDF, this question appears at the top of a fresh page.
+:::
+
+import pandas as pd
+
+def calculate_n50(lengths):
+    """
+    Example python function block
+    """
+    pass
+
+
+{{< pagebreak >}}
+
+Question 3: [Short Title]
+
+::: {.callout-note}
+(Continue this pattern for all questions...)
+:::
