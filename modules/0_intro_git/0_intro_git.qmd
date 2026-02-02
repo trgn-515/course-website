@@ -35,7 +35,65 @@ By the end of this module, you will be able to:
 **GitHub** is a cloud-hosting service for Git repositories that includes powerful tools for project management and collaboration.
 
 
-# 2. Setting up Git
+# 2. Setting up the TRGN-515 classroom
+
+## Step 1: Join the TRGN-515 classroom.
+
+Before starting, you need to accept the assignment via GitHub Classroom using the following link:
+
+```
+https://classroom.github.com/a/nMEEuL7F
+```
+
+If you already have a github account, you can link it.
+
+If you don't have a github account, you need to create one. Clicking the link will direct you to log in or create an account. Once you create your account, verify your account using the code sent to your email.
+
+Once you accept the link, authorize GitHub classroom.
+
+Finally, you have to select your username from the roster. Accept the assignment. Your repository will be automatically created.
+
+You now have a repository on our github classroom. To change the name of this repository: 1) click on your repository; 2) Settings > Repository name; 3) Change and click "Rename" twice.
+
+## Step 2: Connect git repository to the cluster.
+
+You only need do this once. It downloads the repository from GitHub to your local machine or, if the directory already exists in your local machine, it links it to the github remote repository.
+
+#### **Option 1: Clone**
+Use this option if you are starting fresh and you don't have an existing local repository. You already have a folder in the USC server so we don't need to do this.
+
+```Bash
+# Navigate to where you want to keep your coursework
+cd /scratch1/username
+
+# Clone your specific repository (replace URL with your classroom repo link)
+git clone https://github.com/trgn-515-2026/USERNAME.git
+
+# Enter the directory
+cd USERNAME
+```
+
+
+#### **Option 2: Initiate existing folder**
+Since you already have a folder for your user on the cluster, we don't need to "clone" one from github. However, you need to turn your normal folder into a git repository. 
+
+```bash
+# 1. Enter your folder
+cd /scratch1/username
+
+# 2. Initialize Git
+git init
+git branch -M main
+
+# 3. Link to GitHub (Replace URL with your repo link)
+git remote add origin https://github.com/TRGN-515-2026/USERNAME.git
+
+# 4. Pull any existing files (like the README) from GitHub
+git pull origin main --allow-unrelated-histories
+```
+
+
+# 3. Setting up Git
 
 Before you can use Git, you need to tell it who you are. This information will be attached to every "save" (commit) you make.
 
@@ -58,66 +116,23 @@ To verify your setup, run:
 git config --list
 ```
 
-# 3. The git workflow: clone, edit, commit, push
-To submit an assignment in this class, you need to follow these four steps.
+# 4. The git workflow: clone, edit, commit, push
+To submit an assignment in this class, you need to follow these four steps. These are the basic steps you will use in any project you work on in the future.
 
-Before starting, you need to accept the assignment via GitHub Classroom using the following link:
+## Step 1: Pull (Sync)
 
-```
-https://classroom.github.com/a/nMEEuL7F
-```
+To pull in git means to syncronize with the code from a remote repository (usually the latest version of the code).
 
-If you already have a github account, you can link it.
-
-If you don't have a github account, you need to create one. Clicking the link will direct you to log in or create an account. Once you create your account, verify your account using the code sent to your email.
-
-Once you accept the link, authorize GitHub classroom.
-
-Finally, you have to select your username from the roster. Accept the assignment. Your repository will be automatically created.
-
-You now have a repository on our github classroom. To change the name of this repository: 1) click on your repository; 2) Settings > Repository name; 3) Change and click "Rename" twice.
-
-## Step 1: Connect git repository to the cluster.
-
-You only need do this once per assignment. It downloads the repository from GitHub to your local machine or, if the directory already exists in your local machine, it links it to the github remote repository.
-
-#### **Option 1: Clone**
-Use this option if you are starting fresh and you don't have an existing local repository. You already have a folder in the USC server so we don't need to do this.
-
-```Bash
-# Navigate to where you want to keep your coursework
-cd /scratch1/username
-
-# Clone your specific repository (replace URL with your classroom repo link)
-git clone https://github.com/trgn-515-2026/USERNAME.git
-
-# Enter the directory
-cd USERNAME
-```
-
-
-#### **Option 2: Initiate existing Folder**
-Since you already have a folder for your user on the cluster, we don't need to "clode" one from github. However, you need to turn your normal folder into a git repository. 
+Always start your work session with this. It ensures your local computer has the latest changes (e.g: you fixed a typo on the GitHub website or a collaborator merged a change).
 
 ```bash
-# 1. Enter your folder
-cd /scratch1/username
-
-# 2. Initialize Git
-git init
-git branch -M main
-
-# 3. Link to GitHub (Replace URL with your repo link)
-git remote add origin https://github.com/TRGN-515-2026/USERNAME.git
-
-# 4. Pull any existing files (like the README) from GitHub
-git pull origin main --allow-unrelated-histories
+git pull origin main
 ```
 
 ## Step 2: Edit code
 Create files, write code, and save your work as you normally would. For this class, you will create a new folder for each assignment within your user repository.
 
-## Step 3: Stage and Commit (Save)
+## Step 3: Stage and commit (Save)
 Git has a two-step saving process.
 
 * Add (Stage): Select which files you want to save.
@@ -137,11 +152,66 @@ git add my_script.py
 git commit -m "Completed exercise 1"
 ```
 
-## Step 4: Push (Upload)
+## Step 4: Push (upload)
 Your commits currently live only on your computer. To submit your assignment, you must upload them to GitHub.
 
 ```bash
 git push origin main
+```
+
+# 5. Using .gitignore to avoid uploading some files
+
+In bioinformatics, we work with massive files (.bam, .fastq, .vcf) that are too large for GitHub. If you accidentally try to commit a 2GB BAM file, your push will fail and your repository may break.
+
+To prevent this, we use a file called ```.gitignore```. Any filename matching a pattern in this file will be invisible to Git. Remember, a file with a '.' in front of its name is a hidden file. To list all files, including hidden ones, use ```ls -a```.
+
+Create a file named .gitignore in the root of your repository and add the following lines:
+
+```bash
+# Ignore large genomic data files
+*.bam
+*.sam
+*.cram
+*.fastq
+*.fq
+*.fastq.gz
+*.fq.gz
+*.vcf
+*.vcf.gz
+
+# Ignore system files
+.DS_Store
+```
+
+Now, even if you type git add ., Git will safely skip your massive data files and only upload your scripts and markdown.
+
+# 6. Advanced workflow: Branching & Merging
+
+In professional software development, you rarely work directly on the main branch. Instead, you create a "branch" to experiment with changes safely.
+
+* **Branch**: A parallel version of your repository. It lets you work on a new idea or code changes without messing up the working code in main.
+* **Merge**: The process of taking the changes from your branch and combining them back into main.
+
+Although you are not required to use branches for our assignments, understanding this concept is critical for collaboration.
+
+How to use git branches:
+
+```bash
+# 1. Create a new branch and switch to it. Here we will create a new branch called "my-new-feature".
+git checkout -b my-new-feature
+
+# 2. Make edits, add, and commit as usual.
+git add .
+git commit -m "Testing a new idea"
+
+# 3. Switch back to main when you are done
+git checkout main
+
+# 4. Merge the changes from your feature branch into main
+git merge my-new-feature
+
+# 5. Delete the branch if you no longer need it
+git branch -d my-new-feature
 ```
 
 # Setting Up Assignment 1
