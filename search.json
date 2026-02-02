@@ -108,6 +108,102 @@
     ]
   },
   {
+    "objectID": "modules/0_intro_git/0_intro_git.html",
+    "href": "modules/0_intro_git/0_intro_git.html",
+    "title": "Module 0: Git and GitHub",
+    "section": "",
+    "text": "By the end of this module, you will be able to:\n\nConfigure your local Git environment.\nClone your class repository.\nUse the core Git commands (add, commit, push) to submit an assignment.",
+    "crumbs": [
+      "Home",
+      "Module 0: Sequencing technologies",
+      "Module 0: Git and GitHub"
+    ]
+  },
+  {
+    "objectID": "modules/0_intro_git/0_intro_git.html#learning-objectives",
+    "href": "modules/0_intro_git/0_intro_git.html#learning-objectives",
+    "title": "Module 0: Git and GitHub",
+    "section": "",
+    "text": "By the end of this module, you will be able to:\n\nConfigure your local Git environment.\nClone your class repository.\nUse the core Git commands (add, commit, push) to submit an assignment.",
+    "crumbs": [
+      "Home",
+      "Module 0: Sequencing technologies",
+      "Module 0: Git and GitHub"
+    ]
+  },
+  {
+    "objectID": "modules/0_intro_git/0_intro_git.html#step-1-join-the-trgn-515-classroom.",
+    "href": "modules/0_intro_git/0_intro_git.html#step-1-join-the-trgn-515-classroom.",
+    "title": "Module 0: Git and GitHub",
+    "section": "Step 1: Join the TRGN-515 classroom.",
+    "text": "Step 1: Join the TRGN-515 classroom.\nBefore starting, you need to accept the assignment via GitHub Classroom using the following link:\nhttps://classroom.github.com/a/nMEEuL7F\nIf you already have a github account, you can link it.\nIf you don’t have a github account, you need to create one. Clicking the link will direct you to log in or create an account. Once you create your account, verify your account using the code sent to your email.\nOnce you accept the link, authorize GitHub classroom.\nFinally, you have to select your username from the roster. Accept the assignment. Your repository will be automatically created.\nYou now have a repository on our github classroom. To change the name of this repository: 1) click on your repository; 2) Settings &gt; Repository name; 3) Change and click “Rename” twice.",
+    "crumbs": [
+      "Home",
+      "Module 0: Sequencing technologies",
+      "Module 0: Git and GitHub"
+    ]
+  },
+  {
+    "objectID": "modules/0_intro_git/0_intro_git.html#step-2-connect-git-repository-to-the-cluster.",
+    "href": "modules/0_intro_git/0_intro_git.html#step-2-connect-git-repository-to-the-cluster.",
+    "title": "Module 0: Git and GitHub",
+    "section": "Step 2: Connect git repository to the cluster.",
+    "text": "Step 2: Connect git repository to the cluster.\nYou only need do this once. It downloads the repository from GitHub to your local machine or, if the directory already exists in your local machine, it links it to the github remote repository.\n\nOption 1: Clone\nUse this option if you are starting fresh and you don’t have an existing local repository. You already have a folder in the USC server so we don’t need to do this.\n# Navigate to where you want to keep your coursework\ncd /scratch1/username\n\n# Clone your specific repository (replace URL with your classroom repo link)\ngit clone https://github.com/trgn-515-2026/USERNAME.git\n\n# Enter the directory\ncd USERNAME\n\n\nOption 2: Initiate existing folder\nSince you already have a folder for your user on the cluster, we don’t need to “clone” one from github. However, you need to turn your normal folder into a git repository.\n# 1. Enter your folder\ncd /scratch1/username\n\n# 2. Initialize Git\ngit init\ngit branch -M main\n\n# 3. Link to GitHub (Replace URL with your repo link)\ngit remote add origin https://github.com/TRGN-515-2026/USERNAME.git\n\n# 4. Pull any existing files (like the README) from GitHub\ngit pull origin main --allow-unrelated-histories",
+    "crumbs": [
+      "Home",
+      "Module 0: Sequencing technologies",
+      "Module 0: Git and GitHub"
+    ]
+  },
+  {
+    "objectID": "modules/0_intro_git/0_intro_git.html#step-1-pull-sync",
+    "href": "modules/0_intro_git/0_intro_git.html#step-1-pull-sync",
+    "title": "Module 0: Git and GitHub",
+    "section": "Step 1: Pull (Sync)",
+    "text": "Step 1: Pull (Sync)\nTo pull in git means to syncronize with the code from a remote repository (usually the latest version of the code).\nAlways start your work session with this. It ensures your local computer has the latest changes (e.g: you fixed a typo on the GitHub website or a collaborator merged a change).\ngit pull origin main",
+    "crumbs": [
+      "Home",
+      "Module 0: Sequencing technologies",
+      "Module 0: Git and GitHub"
+    ]
+  },
+  {
+    "objectID": "modules/0_intro_git/0_intro_git.html#step-2-edit-code",
+    "href": "modules/0_intro_git/0_intro_git.html#step-2-edit-code",
+    "title": "Module 0: Git and GitHub",
+    "section": "Step 2: Edit code",
+    "text": "Step 2: Edit code\nCreate files, write code, and save your work as you normally would. For this class, you will create a new folder for each assignment within your user repository.",
+    "crumbs": [
+      "Home",
+      "Module 0: Sequencing technologies",
+      "Module 0: Git and GitHub"
+    ]
+  },
+  {
+    "objectID": "modules/0_intro_git/0_intro_git.html#step-3-stage-and-commit-save",
+    "href": "modules/0_intro_git/0_intro_git.html#step-3-stage-and-commit-save",
+    "title": "Module 0: Git and GitHub",
+    "section": "Step 3: Stage and commit (Save)",
+    "text": "Step 3: Stage and commit (Save)\nGit has a two-step saving process.\n\nAdd (Stage): Select which files you want to save.\nCommit: Actually save them with a message describing what you did.\n\n# Check which files have changed\ngit status\n\n# Add everything in the current folder\ngit add .\n\n# or add a specific file\ngit add my_script.py\n\n# Save the snapshot with a message\ngit commit -m \"Completed exercise 1\"",
+    "crumbs": [
+      "Home",
+      "Module 0: Sequencing technologies",
+      "Module 0: Git and GitHub"
+    ]
+  },
+  {
+    "objectID": "modules/0_intro_git/0_intro_git.html#step-4-push-upload",
+    "href": "modules/0_intro_git/0_intro_git.html#step-4-push-upload",
+    "title": "Module 0: Git and GitHub",
+    "section": "Step 4: Push (upload)",
+    "text": "Step 4: Push (upload)\nYour commits currently live only on your computer. To submit your assignment, you must upload them to GitHub.\ngit push origin main",
+    "crumbs": [
+      "Home",
+      "Module 0: Sequencing technologies",
+      "Module 0: Git and GitHub"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "TRGN 515: Advanced Human Genomic Analysis Methods",
@@ -134,5 +230,54 @@
     "title": "Modules",
     "section": "Module 1",
     "text": "Module 1\n\nSequencing Technologies"
+  },
+  {
+    "objectID": "modules/0_intro_git/assignment_template.html",
+    "href": "modules/0_intro_git/assignment_template.html",
+    "title": "Assignment X: Topic Name",
+    "section": "",
+    "text": "Markdown is a lightweight markup language that allows you to format text using plain text symbols. It is the industry standard for documentation in bioinformatics and data science. It is widely used primarily due to the following characteristics:\n\nCode-Friendly: It handles code blocks and syntax highlighting natively.\nGit-Friendly: Since it is plain text, Git can track changes line-by-line (unlike Word documents).\nUniversal: It renders automatically on GitHub and converts easily to PDF or HTML."
+  },
+  {
+    "objectID": "modules/0_intro_git/assignment_template.html#date-last-modified",
+    "href": "modules/0_intro_git/assignment_template.html#date-last-modified",
+    "title": "Assignment X: Topic Name",
+    "section": "",
+    "text": "Markdown is a lightweight markup language that allows you to format text using plain text symbols. It is the industry standard for documentation in bioinformatics and data science. It is widely used primarily due to the following characteristics:\n\nCode-Friendly: It handles code blocks and syntax highlighting natively.\nGit-Friendly: Since it is plain text, Git can track changes line-by-line (unlike Word documents).\nUniversal: It renders automatically on GitHub and converts easily to PDF or HTML."
+  },
+  {
+    "objectID": "modules/0_intro_git/assignment_template.html#this-is-a-subheader",
+    "href": "modules/0_intro_git/assignment_template.html#this-is-a-subheader",
+    "title": "Assignment X: Topic Name",
+    "section": "This is a subheader",
+    "text": "This is a subheader\nStart each answer pasting the question as given in the pdf. After that, you can add your answer."
+  },
+  {
+    "objectID": "modules/0_intro_git/assignment_template.html#writing-code",
+    "href": "modules/0_intro_git/assignment_template.html#writing-code",
+    "title": "Assignment X: Topic Name",
+    "section": "Writing code",
+    "text": "Writing code\nIf the answer requires code, use a code block starting and ending with single quotation marks like the one below:\n# Write your code here\nYou can add language specific code blocks by using the language’s name:\n# Write your BASH code here\nsamtools view ...\n# Write your R code here\nm1 = glm(...)\n# Write your Python code here\nimport pandas"
+  },
+  {
+    "objectID": "modules/0_intro_git/assignment_template.html#adding-images",
+    "href": "modules/0_intro_git/assignment_template.html#adding-images",
+    "title": "Assignment X: Topic Name",
+    "section": "Adding images",
+    "text": "Adding images\nTo add an image or plot to your answer, save the image in your folder and use the following code:\n\nTo add a caption to your image:\n\n\n\nCaption text\n\n\nIf the image is not in the same folder as your markdown file, you need to put the whole path:\n\nThe square brackets are used to give the image a specific format. For instance:"
+  },
+  {
+    "objectID": "modules/0_intro_git/assignment_template.html#other-important-syntax",
+    "href": "modules/0_intro_git/assignment_template.html#other-important-syntax",
+    "title": "Assignment X: Topic Name",
+    "section": "Other important syntax",
+    "text": "Other important syntax\nYour answer can also include lists. You can start a list with the “*” symbol for a bulleted list or with numbers for a numbered list.\n\nItem 1\nItem 2\n\nOr\n\nItem 1\nItem 2\n\nYou can also make a word italic or bold.\nOnce you finish an answer, put the next question on a different page:"
+  },
+  {
+    "objectID": "modules/0_intro_git/assignment_template.html#adding-tables",
+    "href": "modules/0_intro_git/assignment_template.html#adding-tables",
+    "title": "Assignment X: Topic Name",
+    "section": "Adding tables",
+    "text": "Adding tables\nIf you need to include a table, you can do it like this:\n\n\n\nColumn 1\nColumn 2\n\n\n\n\nText 1\nText 2\n\n\nText 3\nText 4\n\n\n\nMaking tables can be tedius. My favority online software to turn .csv or excel tables into markdown or latex is https://www.tablesgenerator.com/markdown_tables"
   }
 ]

@@ -9,7 +9,7 @@
 <meta name="author" content="Arturo Torres Ortiz">
 <meta name="dcterms.date" content="2026-01-13">
 
-<title>Assignment 1: Next Generation Sequencing Technologies – TRGN 515</title>
+<title>Assignment 1: Next Generation Sequencing Technologies – TRGN-515</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -147,7 +147,7 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">TRGN 515</span>
+    <span class="navbar-title">TRGN-515</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -205,12 +205,29 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Module 1: Sequencing technologies</span></a>
+ <span class="menu-text">Module 0: Sequencing technologies</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/0_intro_git/0_intro_git.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 0: Git and GitHub</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Module 1: Sequencing technologies</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../modules/1_sequencing_techs/1_sequencing_techs.html" class="sidebar-item-text sidebar-link active">
@@ -233,12 +250,12 @@ window.Quarto = {
   <li><a href="#input-and-outputs" id="toc-input-and-outputs" class="nav-link" data-scroll-target="#input-and-outputs">Input and outputs</a></li>
   <li><a href="#required-software" id="toc-required-software" class="nav-link" data-scroll-target="#required-software">Required software</a></li>
   <li><a href="#manipulating-fastq-files" id="toc-manipulating-fastq-files" class="nav-link" data-scroll-target="#manipulating-fastq-files">Manipulating Fastq files</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#task-1-compare-raw-read-statistics-between-sequencing-technologies" id="toc-task-1-compare-raw-read-statistics-between-sequencing-technologies" class="nav-link" data-scroll-target="#task-1-compare-raw-read-statistics-between-sequencing-technologies">Task 1: Compare raw read statistics between sequencing technologies</a></li>
   </ul></li>
   <li><a href="#oxford-nanopore-output-files" id="toc-oxford-nanopore-output-files" class="nav-link" data-scroll-target="#oxford-nanopore-output-files">Oxford Nanopore output files</a></li>
   <li><a href="#quality-check" id="toc-quality-check" class="nav-link" data-scroll-target="#quality-check">Quality Check</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#quality-check-for-short-reads---fastqc" id="toc-quality-check-for-short-reads---fastqc" class="nav-link" data-scroll-target="#quality-check-for-short-reads---fastqc">Quality check for short-reads - FastQC</a></li>
   <li><a href="#quality-check-for-long-reads" id="toc-quality-check-for-long-reads" class="nav-link" data-scroll-target="#quality-check-for-long-reads">Quality check for long-reads</a>
   <ul class="collapse">
@@ -246,18 +263,18 @@ window.Quarto = {
   </ul></li>
   </ul></li>
   <li><a href="#quality-control-qc" id="toc-quality-control-qc" class="nav-link" data-scroll-target="#quality-control-qc">Quality Control (QC)</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#qc-for-short-reads---trimmomatic" id="toc-qc-for-short-reads---trimmomatic" class="nav-link" data-scroll-target="#qc-for-short-reads---trimmomatic">QC for short-reads - Trimmomatic</a>
   <ul class="collapse">
   <li><a href="#task-3-run-fastqc-after-running-trimmomatic" id="toc-task-3-run-fastqc-after-running-trimmomatic" class="nav-link" data-scroll-target="#task-3-run-fastqc-after-running-trimmomatic">Task 3: Run FastQC after running Trimmomatic</a></li>
   </ul></li>
   </ul></li>
   <li><a href="#qc-of-long-reads" id="toc-qc-of-long-reads" class="nav-link" data-scroll-target="#qc-of-long-reads">QC of long reads</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#task-4-long-read-qc" id="toc-task-4-long-read-qc" class="nav-link" data-scroll-target="#task-4-long-read-qc">Task 4: Long read QC</a></li>
   </ul></li>
   <li><a href="#read-mapping-to-a-reference-genome" id="toc-read-mapping-to-a-reference-genome" class="nav-link" data-scroll-target="#read-mapping-to-a-reference-genome">Read mapping to a reference genome</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#short-read-mapping" id="toc-short-read-mapping" class="nav-link" data-scroll-target="#short-read-mapping">Short-read mapping</a>
   <ul class="collapse">
   <li><a href="#bwa" id="toc-bwa" class="nav-link" data-scroll-target="#bwa">BWA</a></li>
@@ -272,7 +289,7 @@ window.Quarto = {
   </ul></li>
   </ul></li>
   <li><a href="#variant-calling" id="toc-variant-calling" class="nav-link" data-scroll-target="#variant-calling">Variant calling</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#variant-calling-in-short-reads---bcftools" id="toc-variant-calling-in-short-reads---bcftools" class="nav-link" data-scroll-target="#variant-calling-in-short-reads---bcftools">Variant calling in short-reads - BCFtools</a>
   <ul class="collapse">
   <li><a href="#task-6-complete-the-variant-calling-command" id="toc-task-6-complete-the-variant-calling-command" class="nav-link" data-scroll-target="#task-6-complete-the-variant-calling-command">Task 6: Complete the Variant Calling command:**</a></li>
@@ -284,11 +301,11 @@ window.Quarto = {
   </ul></li>
   <li><a href="#benchmarking" id="toc-benchmarking" class="nav-link" data-scroll-target="#benchmarking">Benchmarking</a></li>
   <li><a href="#vcf-comparison" id="toc-vcf-comparison" class="nav-link" data-scroll-target="#vcf-comparison">VCF comparison</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#task-8-benchmarking-metrics-from-vcf-file" id="toc-task-8-benchmarking-metrics-from-vcf-file" class="nav-link" data-scroll-target="#task-8-benchmarking-metrics-from-vcf-file">Task 8: Benchmarking metrics from VCF file</a></li>
   </ul></li>
   <li><a href="#genome-wide-assessment-using-genomic-windows" id="toc-genome-wide-assessment-using-genomic-windows" class="nav-link" data-scroll-target="#genome-wide-assessment-using-genomic-windows">Genome-wide assessment using genomic windows</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#task-9-benchmarking-of-different-sequencing-technologies-for-snp-calling." id="toc-task-9-benchmarking-of-different-sequencing-technologies-for-snp-calling." class="nav-link" data-scroll-target="#task-9-benchmarking-of-different-sequencing-technologies-for-snp-calling.">Task 9: Benchmarking of different sequencing technologies for SNP calling.</a></li>
   </ul></li>
   </ul>
