@@ -37,7 +37,7 @@ By the end of this module, you will be able to:
 
 # 2. Setting up the TRGN-515 classroom
 
-## Step 1: Join the TRGN-515 classroom.
+## Step 1: Join the TRGN-515 classroom
 
 Before starting, you need to accept the assignment via GitHub Classroom using the following link:
 
@@ -55,7 +55,7 @@ Finally, you have to select your username from the roster. Accept the assignment
 
 You now have a repository on our github classroom. To change the name of this repository: 1) click on your repository; 2) Settings > Repository name; 3) Change and click "Rename" twice.
 
-## Step 2: Connect git repository to the cluster.
+## Step 2: Connect git repository to the cluster
 
 You only need do this once. It downloads the repository from GitHub to your local machine or, if the directory already exists in your local machine, it links it to the github remote repository.
 
