@@ -422,7 +422,7 @@ Choose minimum read length and base quality based on the data from the first tim
 
 ## Short-read mapping
 
-### BWA
+#### **BWA**
 
 To run any read mapping software, we first need a reference genome. We will use the Human Reference Genome version GRCh38. You can find the CARC location for this file at the beginning of this document.
 
@@ -517,7 +517,7 @@ Most tools for marking duplicates from BAM files use the 5' coordinates and mapp
 
 The most commonly used software for marking duplicates is Picard (also implemented within GATK). However, this tool requires a lot of memory and time. I prefer another implementation of the same algorithm within the software `Sambamba`.
 
-### Sambamba
+#### **Sambamba**
 
 Sambamba takes a bam file as input and outputs a bam file where the read flag has been changed in some reads to reflect they are a duplicate. You can run sambamba as:
 
