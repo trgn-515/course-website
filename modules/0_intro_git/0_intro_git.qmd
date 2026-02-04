@@ -53,10 +53,13 @@ Once you accept the link, authorize GitHub classroom.
 
 Finally, you have to select your username from the roster. Accept the assignment. Your repository will be automatically created.
 
-You now have a repository on our github classroom. To change the name of this repository: 1) click on your repository; 2) Settings > Repository name; 3) Change and click "Rename" twice.
+You now have a repository on our github classroom. You can access it with the following link:
 
+```https://github.com/trgn-515/USERNAME```.
 
-::: {.callout-warn}
+To change the name of this repository: 1) click on your repository; 2) Settings > Repository name; 3) Change and click "Rename" twice.
+
+::: {.callout-important}
 For security reasons, many of the github operations we will do require you to create a token. A token is like a temporary password.
 
 To create a token, go to your github account, click user (upper-right icon) > Settings > Developer Settings (all the way down on the left column) > Personal access tokens > Tokens (Classic) > Generate new token > Generate new token (classic)
